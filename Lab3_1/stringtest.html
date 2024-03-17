@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pass Task 3.1: String Test</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>String Test</h1>
+      <form>
+        <label>Please enter your name:</label>
+            <input type="text" v-model="name">
+            <button @click.prevent="checkName">Check Name</button>
+      </form>
+      <p>{{ message }}</p>
+    </div>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            name: '',
+            message: ''
+          }
+        },
+        methods: {
+          checkName() {
+              if (this.name.toLowerCase() === 'bao') {
+                  this.message = 'Awesome name!';
+              } else {
+                  this.message = this.name.toLowerCase() + ' is not my name.';
+              }
+          }
+        }
+      });
+
+      app.mount('#app');
+    </script>
+  </body>
+</html>

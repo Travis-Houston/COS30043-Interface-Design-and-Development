@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="Web development" />
+<meta name="keywords" content="Registration Form" />
+<link href="css/style2.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<title>Tico Taco's website</title>
+</head>
+<body>
+    <nav class="navigation-bar">
+        <img class="logo" src="images/Logo.png" alt="logo">
+        <a href="order.html" class="bounce">Order your Tacos</a>
+        <a href="#" id="active">Register</a>
+        <a href="index.html" class="bounce" >Home</a>
+    </nav>
+<main>
+  <div class="container">
+    <!-- background image -->
+    <img class="gfg" src="images/membership.jpg" alt="taco-background">
+
+    <!-- title and tag line with button -->
+    <div class="banner">
+        <h1>Register to get the best discount of your lives with our membership</h1>
+        <p>In Tica Taco's, we adore our members. Every member will get a free taco first time register. So what are you waiting for?</p>
+    </div>
+</div>
+<!--form-->
+  <div class="wrapper">
+    <h2>Registration</h2>
+    <div id="error"></div>
+    <form id="form" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post">
+      <div class="input-box">
+        <input type="text" id="aname" placeholder="Enter your name">
+      </div>
+      <div class="input-box">
+        <input type="text" id="email" placeholder="Enter your email">
+      </div>
+      <div class="input-box">
+        <input type="password" id="pwd1" placeholder="Create password">
+      </div>
+      <div class="input-box">
+        <input type="password" id="pwd2" placeholder="Confirm password">
+      </div>
+      <div class="gender">
+        <p>GENDER:</p>
+        <label class="radio-gender">Male
+          <input type="radio" name="gender" id="male" value="male">
+          <span class="checkmark"></span>
+        </label>
+        <label class="radio-gender">Female
+          <input type="radio" name="gender" id="female" value="female">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <label>Local Tica's</label>
+      <div class="select">
+        <select class="local">
+          <option value="adress 1">adress 1</option>
+          <option value="adress 2">adress 2</option>
+          <option value="adress 3">adress 3</option>
+          <option value="adress 4">adress 4</option>
+          <option value="adress 5">adress 5</option>
+          <option value="adress 6">adress 6</option>
+        </select>
+  <span class="focus"></span>
+</div>
+      <div class="input-box button">
+        <input type="reset" value="Reset">
+      </div>
+      <div class="input-box button">
+        <input type="submit" value="Register Now">
+      </div>
+    </form>
+  </div>
+</main>
+
+    <!-- Site footer -->
+<footer class="footer-distributed">
+    <div class="footer-left">
+      <h3>Tica's tacos</h3>
+      <p class="footer-slogan">
+        KEEP CALM AND TICA TACO TICA TA TICA TA TICA
+      </p>
+      <p class="footer-company-name">Ticatacos &copy; 2021</p>
+    </div>
+        
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>901 S Main St</span> Salinas, CA 93901, USA</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+1 555 123456</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">jmattioli@ticastacos.net</a></p>
+      </div>
+        
+    </div>
+        
+    <div class="footer-right">
+      <p class="footer-company-about">
+      <span>Description</span>
+      Taking Taco Tuesday To Another Level! You'll Love Our Weekly Menus. Serving Philadelphia and Montgomery Counties. Support Small Business!
+      </p>
+        
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+        
+        </div>
+        
+        </div>
+        
+        </footer>
+        <script src="js/Script2.js"></script>
+  </body>
+
+  </html>

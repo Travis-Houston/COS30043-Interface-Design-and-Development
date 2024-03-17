@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="Web development" />
+<meta name="keywords" content="Registration Form" />
+<link href="css/style3.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<title>Tico tacos Website</title>
+</head>
+<body>
+    <nav class="navigation-bar">
+        <img class="logo" src="images/Logo.png" alt="logo">
+        <a href="#" id="active">Order your Tacos</a>
+        <a href="register.html" class="bounce">Register</a>
+        <a href="index.html" class="bounce">Home</a>
+    </nav>
+<main>
+    <div class="container-benner">
+        <!-- background image -->
+        <img class="gfg" src="images/tasty-appetizing-tacos-with-vegetables_1220-4212.jpg" alt="taco-background">
+ 
+        <!-- title and tag line with button -->
+        <div class="banner">
+            <h1>Order your Tacos today</h1>
+            <p>We deliver delicious Tacos right at your house in 5 minutes.</p>
+        </div>
+    </div>
+    <!--Order panel-->
+    <div class="container">
+
+        <div class="title">
+            <h2>Order</h2>
+        </div>
+      <div id="error"></div>        
+      <div class="d-flex">
+        <form id="form" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post">
+          <label for="fname">
+            <span class="fname">First Name <span class="required">*</span></span>
+            <input type="text" name="fname" id="fname">
+          </label>
+          <label for="lname">
+            <span class="lname">Last Name <span class="required">*</span></span>
+            <input type="text" name="lname" id="lname">
+          </label>
+          <label for="ID">
+            <span>ID</span>
+            <input type="text" name="ID" id="ID">
+          </label>
+          <div class="textinput">
+          <label>
+            <span>Delivery Adress</span>
+            <input id="textbox" type="text" name="delivery" placeholder="Enter Your adress">
+          </label>
+        </div>
+          <div id="change">
+            <div class="radioinput">
+              <label for="same">
+              <span class="same">Same as delivery address</span>
+              <input id="same" type="checkbox" name="same" onclick="myFunction(); sameas (event);">
+              </label>
+            <div class="userdetails">
+              <div class="textinput">
+            <input type="text" id="BillingAd" disabled>
+            </div>
+            </div>
+            </div>
+            </div>
+          <label for="ZIP">
+            <span>Postcode / ZIP <span class="required">*</span></span>
+            <input type="text" name="ZIP" id="ZIP"> 
+          </label>
+          <label for="phone">
+            <span>Phone <span class="required">*</span></span>
+            <input type="tel" name="phone" id="phone"> 
+          </label>
+          <label for="email">
+            <span>Email Address <span class="required">*</span></span>
+            <input type="email" name="email" id="email"> 
+          </label>
+          <input type="submit" class="button">
+        </form>
+        <div class="Yorder">
+          <table>
+            <tr>
+              <th colspan="2">Your order</th>
+            </tr>
+            <tr>
+              <td>Azada Taco x 2</td>
+              <td>$9.9</td>
+            </tr>
+            <tr>
+              <td>Subtotal</td>
+              <td>$9.9</td>
+            </tr>
+            <tr>
+              <td>Shipping</td>
+              <td>Free shipping</td>
+            </tr>
+          </table><br>
+          <div>
+            <input type="radio" name="dbt" value="dbt" checked> Direct Bank Transfer
+          </div>
+          <p>
+              Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+          </p>
+          <div>
+            <input type="radio" name="dbt" value="cd"> Cash on Delivery
+          </div>
+          <div>
+            <input type="radio" name="dbt" value="cd"> Paypal <span>
+            <img src="https://www.logolynx.com/images/logolynx/c3/c36093ca9fb6c250f74d319550acac4d.jpeg" alt="" width="50">
+            </span>
+          </div>
+
+        </div><!-- Yorder -->
+       </div>
+      </div>
+</main>
+
+    <!-- Site footer -->
+<footer class="footer-distributed">
+    <div class="footer-left">
+      <h3>Tica's tacos</h3>
+      <p class="footer-slogan">
+        KEEP CALM AND TICA TACO TICA TA TICA TA TICA
+      </p>
+      <p class="footer-company-name">Ticatacos &copy; 2021</p>
+    </div>
+        
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>901 S Main St</span> Salinas, CA 93901, USA</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+1 555 123456</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="#">jmattioli@ticastacos.net</a></p>
+      </div>
+        
+    </div>
+        
+    <div class="footer-right">
+      <p class="footer-company-about">
+      <span>Description</span>
+      Taking Taco Tuesday To Another Level! You'll Love Our Weekly Menus. Serving Philadelphia and Montgomery Counties. Support Small Business!
+      </p>
+        
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+        
+        </div>
+        
+        </div>
+        
+        </footer>
+        <script src="js/Script3.js"></script>
+  </body>
+
+  </html>

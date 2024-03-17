@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> VueJS Week04 </title>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id = "app">
+        <example_component></example_component>
+        <example_component></example_component>
+        <example_component></example_component>
+        <blog-post title = "My Journey with Vue"></blog-post>
+        <blog-post title = "Blogging with Vue"></blog-post>
+        <blog-post title = "Why Vue is so fun"></blog-post>
+
+        <myexample v-bind:fruits="['apple', 'orange', 'grape']"></myexample>
+        <myexample :fruits="['apple', 'orange', 'grape']"></myexample>
+    </div>
+     <script src="js/app08.js"></script> 
+</body>
+</html>

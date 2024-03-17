@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> VueJS </title>
+    <link href = "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href = "https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href = "https://cdn.jsdelivr.net/npm/vuetify@3.3.3/dist/vuetify.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.3.3/dist/vuetify.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="app">
+        <v-app>
+            <v-main>
+                <v-container>Hello World</v-container>
+                <v-container fluid>
+                    <v-btn color="primary" >
+                        <v-icon>mdi-pencil</v-icon> <!-- mdi: material design icon -->
+                    </v-btn>
+                    <v-btn color="error" >
+                        <v-icon>mdi-alarm</v-icon>
+                    </v-btn>
+                </v-container>
+
+                <v-container fluid>
+                    <v-alert type="success">
+                        I'm a success alert.
+                    </v-alert>
+                    <v-alert type="info">
+                        I'm an info alert.
+                    </v-alert>
+                </v-container>
+            </v-main>
+        </v-app>
+    </div>
+    <script src="js/app12.js"></script>  
+</body>
+</html>   

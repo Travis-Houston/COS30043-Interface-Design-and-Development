@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile OS and Phone Model Selector</title>
+  <!-- Include Vue.js library from a CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- Include Bootstrap CSS from a CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div id="app" class="container mt-5">
+    <h1>Mobile OS and Phone Model Selector</h1>
+
+    <!-- Input field for username -->
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" v-model="username">
+    </div>
+
+    <!-- Input field for password -->
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" v-model="password">
+    </div>
+
+    <!-- Input field for password confirmation -->
+    <div class="form-group">
+      <label for="password-confirm">Confirm Password:</label>
+      <input type="password" class="form-control" id="password-confirm" v-model="passwordConfirm">
+      <!-- Display an error message if passwords don't match -->
+      <span v-if="password !== passwordConfirm" class="text-danger">Passwords do not match.</span>
+    </div>
+
+    <!-- Radio buttons to select mobile operating system -->
+    <div class="form-group">
+      <label for="mobile-os">Mobile Operating System:</label><br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="mobile-os" id="android" value="Android" v-model="selectedOS">
+        <label class="form-check-label" for="android">Android</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="mobile-os" id="ios" value="IOS" v-model="selectedOS">
+        <label class="form-check-label" for="ios">iOS</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="mobile-os" id="windows" value="Windows" v-model="selectedOS">
+        <label class="form-check-label" for="windows">Windows</label>
+      </div>
+    </div>
+
+    <!-- Dropdown menu to select phone model -->
+    <div class="form-group">
+      <label for="phone-model">Phone Model:</label>
+      <select class="form-control" id="phone-model" v-model="selectedModel">
+        <!-- Use v-for directive to loop through filtered models based on selected OS -->
+        <option v-for="model in filteredModels" v-bind:value="model.model">{{ model.model }}</option>
+      </select>
+    </div>
+
+    <!-- Display summary of selected options -->
+    <div v-if="selectedModel">
+      <h2>Summary</h2>
+      <ul>
+        <li>Username: {{ username }}</li>
+        <li>Password: {{ password }}</li>
+        <li>Mobile OS: {{ selectedOS }}</li>
+        <li>Phone Model: {{ selectedModel }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        username: '',
+        password: '',
+        passwordConfirm: '',
+        selectedOS: 'Android',
+        selectedModel: '',
+        phoneModels: []
+      },
+      mounted: function() {
+        // Fetch phone models from JSON file and store in data
+        fetch('phone.json')
+          .then(response => response.json())
+          .then(data => {
+            this.phoneModels = data;
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      },
+      computed: {
+        // Filter phone models based on selected OS
+        filteredModels: function() {
+          return this.phoneModels.filter(model => model.os === this.selectedOS);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<script src="https://unpkg.com/vue@3"></script>
+
+<div id = "app"> 
+    <a v-bind:href = "someURL"> Website </a>
+    <br>
+    <img v-bind:src = "imageSrc" width="100">
+</div>
+
+<script type = "module">
+    const { createApp } = Vue
+    createApp({
+        data(){
+            return {
+                someURL : "https://swin.edu.au",
+                imageSrc : "images/flower.jpeg"
+            }
+        }
+    }).mount('#app')
+</script>

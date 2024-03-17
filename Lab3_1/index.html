@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>String Test</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>String Test</h1>
+      <form>
+        <label for="name-input">Please enter your name:</label>
+        <input type="text" id="name-input" v-model="name">
+      </form>
+      <p v-if="name.toLowerCase() === 'bao'">Awesome name!</p>
+      <p v-else>{{ name }} is not my name.</p>
+    </div>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            name: ''
+          }
+        }
+      });
+
+      app.mount('#app');
+    </script>
+  </body>
+</html>

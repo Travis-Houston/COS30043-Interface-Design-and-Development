@@ -1,0 +1,23 @@
+<script src="https://unpkg.com/vue@3"></script>
+
+<div id = "app">
+    <div v-if="myVar == 'dogs'">
+        <h3>Dogs</h3>
+        <p>Welcome to a world of dogs.</p>
+    </div>
+</div>
+
+<div v-if="Math.random() > 0.5"> Congratulations </div>
+<div v-else> Better Luck Next Time </div>
+
+<script type = "module">
+    const { createApp } = Vue
+
+    createApp({
+        data(){
+            return {
+                myVar : "dogs"
+            }
+        }
+    }).mount('#app')
+</script>
